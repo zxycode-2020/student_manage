@@ -1,0 +1,19 @@
+作业1
+    models层
+    面相对象封装mysqldb
+        execute()
+        query()
+
+作业2
+模板获取函数的抽象
+
+作业3
+首页---查询所有学生列表，并且用jinja2 渲染出来
+
+
+作业4
+windows 下的virtualenv搭建
+    环境目录/scripts/active
+
+作业5
+增加一个学生- 查询参数做

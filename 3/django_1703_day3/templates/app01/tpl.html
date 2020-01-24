@@ -1,0 +1,116 @@
+{% load staticfiles %}
+{% load mytags %}
+{% load myfilter %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+</head>
+<body>
+<h1>我是模板</h1>
+<img src="{% static 'images/1.jpg' %}" width="100" height="100">
+<hr>
+    {% autoescape off %}
+        {{ link | escape}}
+    {% endautoescape %}
+<hr>
+    {{ desc1 | disspace }}
+<hr>
+{% get_now %}
+<hr>
+求和：：：{% add 1 2 %}
+<hr>
+{{ name }}
+{{ age }}
+{{ sex }}
+{{ score }}
+{{ cls }} <!--如果模板变量不存在则渲染空字符-->
+<hr>
+<!--掉用列表-->
+{{ subject.0 }}
+{{ subject.1 }}
+<hr>
+<!--调用字典-->
+{{ info.interest }}
+{{ info.money }}
+<hr>
+{{ h1.name }}
+{{ h1.age }}
+{{ h1.sayGoodBye }}
+<hr>
+{% if score >= 100 %}
+    <span style="color:red">S级，牛逼----</span>
+    {% if info.money < 10000 %}
+        <span style="color:#1bff2f">虽然学习好，但是是个穷逼</span>
+    {% endif %}
+{% elif score >= 90 %}
+    <span style="color:red">A级，还行</span>
+{% elif score >= 80%}
+    <span style="color:red">B级，普通</span>
+{% else %}
+    <span style="color:red">不及格，fuck off</span>
+{% endif %}
+<hr>
+<ul>
+{% for sub in subject %}
+    {% if forloop.last %} <!--如果是第一项返回True，否则False-->
+        <li style="color: red">{{ forloop.counter0 }}--{{ forloop.counter }}--{{ forloop.revcounter }} -- {{ sub }}</li>
+    {% else %}
+        <li>{{ forloop.counter0 }}--{{ forloop.counter }}--{{ forloop.revcounter }} -- {{ sub }}</li>
+    {% endif %}
+    {% empty %} <!--如果迭代对象为空则输出下边的html-->
+     nothing to do
+{% endfor %}
+</ul>
+<!--------------------------------------------------------------------->
+<hr>
+{% for key,value in info.items %}
+    {{ key }} ---  {{ value }}
+{% endfor %}
+<hr>
+{% for province in china %} <!--遍历列表-->
+    <ul>
+    {% for pro,citys in province.items %} <!--遍历字典-->
+        <h3>{{ pro }}</h3>
+        {% for city in citys %} <!--遍历城市列表-->
+            {% ifequal city '三里屯' %}
+                <li style="color: red">{{ city }}--好地方</li>
+            {% else %}
+                <li>{{ city }}</li>
+            {% endifequal %}
+        {% endfor %}
+    {% endfor %}
+    </ul>
+{% endfor %}
+<hr>
+{% for i in range %}
+    {{ i }} {% if not forloop.last %} -- {% endif %}
+{% endfor %}
+<hr>
+{{ engname | lower | upper }}
+<hr>
+{{ desc | linebreaksbr }}
+<hr>
+<!--英文切字符串-->
+{{ desc1 | truncatewords:'2' }}
+<hr>
+{{ desc1 | truncatechars:'5' }}
+<hr>
+<!--中文用slice切字符串-->
+{{ desc | slice:'30' }}...<a href="" >[详细]</a>
+<hr>
+{{ desc | slice:'3:30' }}...<a href="" >[详细]</a>
+<hr>
+{{ "123spam456spam789" | cut:"spam" }}
+{{ now | date:'Y-m-d H:i:s' }}
+{{ wljd | default:'(N/A)' }}
+{{ suibian | default_if_none:'(N/A)----' }}
+<hr>
+{{ range | join:':' }}
+<hr>
+{{ range | length }}
+</body>
+</html>

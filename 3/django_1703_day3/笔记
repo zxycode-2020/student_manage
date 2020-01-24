@@ -1,0 +1,5 @@
+模板：
+    render # (大模板（形成html文件）)
+    render_to_response （大模板（形成html文件））
+    Tempalte (一般适合一小段html替换)
+

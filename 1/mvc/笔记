@@ -1,0 +1,36 @@
+python2  python3  共存
+
+分析web开发流程
+
+url   ： 同意资源定位符
+uri ： 路径+查询参数
+
+协议：// 主机名：域名:端口号/路径?查询参数
+
+http协议 请求周期
+    web开发
+    爬虫
+
+mvc 模式
+    m：moudel        数据层
+    v: views 视图 --- template
+    c ：ctroller 控制器  业务逻辑层
+
+    django ：
+    mtv:
+    m : models 数据层（orm）
+    t : template （模板层，jinja2）
+    v ：views （视图函数 ，业务逻辑层）
+
+手动写一个mvc框架
+    mysql-python （python2 操作mysql数据库的模块）
+    jinja2 (模板引擎)
+    路由系统
+    视图函数（业务逻辑）
+    模型（数据）
+
+virtualenv  windows
+django 模块安装
+项目创建
+
+

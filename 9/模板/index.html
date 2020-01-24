@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>首页</title>
+    <link rel="stylesheet" href="./index/bootstrap.css">
+    <link rel="stylesheet" href="./index/commons.css">
+    <link rel="stylesheet" href="./index/plugin.css">
+
+    <link href="./index/jquery.bxslider.css" rel="stylesheet">
+    <link href="./index/font-awesome.min.css" rel="stylesheet">
+    <link href="./index/plugins.css" rel="stylesheet">
+    <link href="./index/owl.carousel.css" rel="stylesheet">
+
+    <style>
+        .sv-error-msg {
+            bottom: -15px;
+            position: absolute;
+            font-size: 8px;
+            color: #a94442;
+            background: #f2dede;
+            border: 1px solid #ebccd1;
+            height: 15px;
+            line-height: 15px;
+            padding: 0 20px;
+        }
+
+        .horiz-img-region {
+            padding: 10px 0px;
+            margin-top: 20px;
+        }
+
+        .horiz-img-region .horiz-img-item {
+            width: 176px;
+            float: left;
+            margin: 0 10px;
+        }
+
+        .horiz-img-region .horiz-img-item img {
+            height: 160px;
+            width: 100%;
+            display: block;
+        }
+
+        .thumbnail .caption {
+            height: 51px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .thumbnail .caption p {
+            margin: 0px;
+        }
+
+        .recruit_region {
+        }
+
+        .recruit_list {
+            color: #555;
+            margin: 5px 0px;
+            display: block;
+            cursor: pointer;
+
+        }
+
+        .recruit_list .title {
+            padding-left: 0px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .recruit_list .salary {
+            text-align: right;
+        }
+
+        .owl-clients-v1 img {
+            width: 120px;
+            height: auto;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="pg-header">
+    <div class="header">
+        <div class="wrap clearfix">
+            <div class="logo">
+                <a href="http://127.0.0.1/index.html">
+                    <img src="./index/logo1.jpg">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1/index.html">首页</a></li>
+                    <li><a href="http://127.0.0.1/teacher.html">师资团队</a></li>
+                    <li><a href="http://127.0.0.1/students.html">学员就业</a></li>
+                    <li><a href="http://127.0.0.1/videos-0-0-0.html">课程分类</a></li>
+                    <li><a href="http://127.0.0.1/problems.html">常见问题</a></li>
+                    <li><a href="http://127.0.0.1/about.html">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="info">
+                <div class="lists">
+
+                    <span class="phone">
+                            <i class="glyphicon glyphicon-headphones"></i>
+                            <span>010-88888888</span>
+                        </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pg-body">
+
+
+    <div>
+        <form>
+            <input type="hidden" name="csrfmiddlewaretoken" value="Rc9pWGLtiPIScxKCtHzDetfDyz7gxy1i">
+        </form>
+    </div>
+
+    <div>
+        <div>
+            <ul id="bxslider" class="bxslider">
+                <li>
+                    <a href="#">
+                        <img style="height: 300px; width: 100%" src="./index/b1.jpg">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img style="height: 300px; width: 100%" src="./index/b2.jpg">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img style="height: 300px; width: 100%" src="./index/b3.jpg">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img style="height: 300px; width: 100%" src="./index/b4.jpg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="bg-gray ptb20">
+        <div class="wrap">
+            <div class="floor">
+
+                <div class="floor-title">
+                    <span>最新公告</span>
+                </div>
+
+                <div class="floor-content clearfix" style="background-color: #F2FFEA;">
+
+                    <div class="row">
+
+                        <div class="col-sm-4 info-blocks">
+
+                            <i class="icon-info-blocks fa fa-bell-o" style="margin-top: 20px;"></i>
+
+                            <div class="info-blocks-in">
+                                <h3>Python 11期火热开班</h3>
+                                <p style="color: #999;">
+                                    紧靠苏州河，原为杜月笙仓库，极具历史感和传奇性，公园河畔恬静优雅。客房装潢温馨，有老上海风情...
+                                    <br>
+                                    <a href="http://127.0.0.1/notice-1.html" target="_blank">查看更多</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 info-blocks">
+
+                            <i class="icon-info-blocks fa fa-bell-o" style="margin-top: 20px;"></i>
+
+                            <div class="info-blocks-in">
+                                <h3>python班又出捷报</h3>
+                                <p style="color: #999;">
+                                    紧靠苏州河，原为杜月笙仓库，极具历史感和传奇性，公园河畔恬静优雅。客房装潢温馨，有老上海风情...
+                                    <br>
+                                    <a href="http://127.0.0.1/notice-2.html" target="_blank">查看更多</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 info-blocks">
+
+                            <i class="icon-info-blocks fa fa-bell-o" style="margin-top: 20px;"></i>
+
+                            <div class="info-blocks-in">
+                                <h3>又来一波公开课</h3>
+                                <p style="color: #999;">
+                                    紧靠苏州河，紧靠苏州河，紧靠苏州河，紧靠苏州河，紧靠苏州河，原为杜月笙仓库，极具历史感和传奇性，公园河畔恬静优雅。客房装潢温馨，有老上海风情..
+                                    <br>
+                                    <a href="http://127.0.0.1/notice-3.html" target="_blank">查看更多</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+
+            <div class="floor">
+                <div class="floor-title">
+                    <span>课程介绍</span>
+                </div>
+                <div class="floor-content clearfix">
+
+
+                    <a class="panel-item" href="http://127.0.0.1/course-detail-5.html">
+                        <div class="service-block service-block-default">
+                            <img style="width:50px;height: 50px;" src="./index/3.jpg"
+                                 alt="" class="img-circle">
+                            <h2 class="heading-md">Python脱产班</h2>
+                            <p>suh列比拼看老难哈呢阿斯蒂芬；冷酷的撒地方</p>
+                        </div>
+                    </a>
+
+                    <a class="panel-item" href="http://127.0.0.1/course-detail-3.html">
+                        <div class="service-block service-block-default">
+                            <img style="width:50px;height: 50px;" src="./index/3.jpg"
+                                 alt="" class="img-circle">
+                            <h2 class="heading-md">Python</h2>
+                            <p>找工作北京猎聘网上海猎聘网广州猎聘网深圳猎聘网南京猎聘网杭州猎聘网岗位职责万仕道</p>
+                        </div>
+                    </a>
+
+                    <a class="panel-item" href="http://127.0.0.1/course-detail-4.html">
+                        <div class="service-block service-block-default">
+                            <img style="width:50px;height: 50px;" src="./index/3.jpg"
+                                 alt="" class="img-circle">
+                            <h2 class="heading-md">架构</h2>
+                            <p>summary架构summary架构summary架构</p>
+                        </div>
+                    </a>
+
+                    <a class="panel-item" href="http://127.0.0.1/course-detail-1.html">
+                        <div class="service-block service-block-default">
+                            <img style="width:50px;height: 50px;" src="./index/3.jpg" alt=""
+                                 class="img-circle">
+                            <h2 class="heading-md">Python</h2>
+                            <p>nows the usuasdfaPython knows the usu</p>
+                        </div>
+                    </a>
+
+                    <a class="panel-item" href="http://127.0.0.1/course-detail-2.html">
+                        <div class="service-block service-block-default">
+                            <img style="width:50px;height: 50px;" src="./index/3.jpg" alt=""
+                                 class="img-circle">
+                            <h2 class="heading-md">C++</h2>
+                            <p>不影响为了便于截图、文章中能排版完整 所以css代码进行换行 不影响功能 功能 </p>
+                        </div>
+                    </a>
+
+                    <a class="panel-item" href="http://127.0.0.1/course-detail-6.html">
+                        <div class="service-block service-block-default">
+                            <img style="width:50px;height: 50px;" src="./index/3.jpg"
+                                 alt="" class="img-circle">
+                            <h2 class="heading-md">Python高级</h2>
+                            <p>summary通过颜色来展示意图，Bootstrap 提供了一组工具类。这些类可</p>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+
+
+            <div class="floor">
+                <div class="floor-title">
+                    <span>学员就业</span>
+                    <a href="http://127.0.0.1/search-0-0-0-0-0-0.html" target="_blank" class="more">More »</a>
+                </div>
+                <div class="floor-content clearfix">
+                    <div class="col-md-8">
+                        <div class="funny-boxes funny-boxes-top-yellow bg-color-white">
+                            <div class="row">
+                                <div class="col-md-4 funny-boxes-img">
+                                    <img class="img-responsive" style="height: 186px;width: 160px;"
+                                         src="./index/2.jpg" alt="">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa-fw fa fa-briefcase"></i> 200000/月</li>
+                                        <li><i class="fa-fw fa fa-map-marker"></i> 北京其二布莱特科技公司</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="#">小美</a></h2>
+                                    <ul class="list-unstyled funny-boxes-rating">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star-o"></i></li>
+                                    </ul>
+                                    <p>
+                                        公司一群老油条，懒散惯了！对于领导的工作安排也是拖拖拉拉！这样下去不行啊。于是厂长，把他女婿安排进来，监督他们！老油条不愧老油条，没多久。厂长女婿也被他们拖下水，上了他们的贼船……</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 recruit_region">
+                        <div class="headline" style="margin:0px;border-bottom:2px solid #72c02c"></div>
+                        <h2 style="margin: 10px 0px;">招聘信息</h2>
+
+
+                        <a class="recruit_list clearfix">
+                            <div class="col-md-8 title">罪行特卖网络技术</div>
+                            <div class="col-md-4 salary">1999999/月</div>
+                        </a>
+
+
+                    </div>
+
+                    <div class="col-md-12 horiz-img-region clearfix">
+
+                        <div class="horiz-img-item">
+                            <div class="thumbnail">
+                                <img src="./index/1.jpg">
+                                <div class="caption">
+                                    <p>北京其二布莱特科技公司</p>
+                                    <p>1999999/月</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="horiz-img-item">
+                            <div class="thumbnail">
+                                <img src="./index/1.jpg">
+                                <div class="caption">
+                                    <p>e天天教育有限公司</p>
+                                    <p>200000/月</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="horiz-img-item">
+                            <div class="thumbnail">
+                                <img src="./index/1.jpg">
+                                <div class="caption">
+                                    <p>中国中央电视台CCAV</p>
+                                    <p>399999 /月</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="horiz-img-item">
+                            <div class="thumbnail">
+                                <img src="./index/1.jpg">
+                                <div class="caption">
+                                    <p>中国中央电视台CCAV</p>
+                                    <p>1999999/月</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="horiz-img-item">
+                            <div class="thumbnail">
+                                <img src="./index/1.jpg">
+                                <div class="caption">
+                                    <p>北京其二布莱特科技公司</p>
+                                    <p>200000/月</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="floor">
+                <div class="floor-title">
+                    <span>校园生活</span>
+                </div>
+                <div class="floor-content clearfix">
+                    <div class="row team-v3">
+                        <div class="col-md-3 col-sm-6 md-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="./index/img1-md.jpg" alt="">
+                                <div class="team-hover">
+                                    <span>Daniel Wearne</span>
+                                    <small>Technical Director</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 md-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="./index/img5-md.jpg" alt="">
+                                <div class="team-hover">
+                                    <span>Sara Lisbon</span>
+                                    <small>Designer</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 sm-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="./index/img3-md.jpg" alt="">
+                                <div class="team-hover">
+                                    <span>John Doe</span>
+                                    <small>Developer</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="team-img">
+                                <img class="img-responsive" src="./index/img2-md.jpg" alt="">
+                                <div class="team-hover">
+                                    <span>Alice Williams</span>
+                                    <small>Support</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="floor">
+                <div class="floor-title">
+                    <span>企业合作</span>
+                </div>
+                <div class="floor-content clearfix">
+                    <div class="owl-clients-v1 owl-carousel owl-theme" style="opacity: 1; display: block;">
+
+                        <div class="owl-wrapper-outer">
+                            <div class="owl-wrapper"
+                                 style="width: 280px; left: 0px; display: block; transition: all 1000ms ease; transform: translate3d(0px, 0px, 0px);">
+                                <div class="owl-item" style="width: 140px;"><a class="item" href="javascript:void(0)">
+                                    <img src="./index/6.png" alt="x小男人">
+                                </a></div>
+                            </div>
+                        </div>
+
+                        <div class="owl-controls clickable" style="display: none;">
+                            <div class="owl-pagination">
+                                <div class="owl-page"><span class=""></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+<div class="pg-footer bg-gray">
+    <div class="wrap">
+        <div class="footer-block">
+            <p>
+                <a href="javascript:void(0);" target="_blank">关于我们</a>
+                <a href="javascript:void(0);" target="_blank">联系我们</a>
+                <a href="javascript:void(0);" target="_blank">招贤纳士</a>
+                <span class="fline">|</span>
+
+                <a class="footauto" href="javascript:void(0);" target="_blank">教育</a>
+                <span class="fline">|</span>
+                <a href="javascript:void(0);" target="_blank">意见反馈</a>
+            </p>
+
+            <p>京ICP备123456789号</p>
+            <p><span class="footarial">© 2004-2015 www.kami.org All Rights Reserved.</span> 教育 版权所有</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./index/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="./index/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='popover']").popover();
+    });
+
+</script>
+
+<script src="./index/jquery.bxslider.min.js"></script>
+<script src="./index/owl.carousel.js"></script>
+<script src="./index/owl-carousel.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('.bxslider').bxSlider({
+            auto: true
+        });
+
+        OwlCarousel.initOwlCarousel();
+    });
+
+    function SubmitPublish(form, status) {
+        var result = $.validate(form, status);
+        if (result) {
+            $.ajax({
+                url: '/publish.html',
+                type: 'POST',
+                data: result,
+                success: function (callback) {
+                    callback = $.parseJSON(callback);
+                    if (callback.status) {
+
+                    } else {
+                        $.each(callback.error, function (key, value) {
+
+                            var name = key;
+                            var msg = value[0].message;
+                            var $parent = $(form).find('[name="' + name + '"]').parent();
+                            $.ErrorMessage($parent, msg);
+                        });
+                    }
+                }
+            });
+        }
+    }
+
+    function CancelPublish() {
+
+    }
+    $(function () {
+        ChangeTab('#tab-menu-title', '#tab-menu-body');
+    });
+
+    function ChangeTab(title, body) {
+        $(title).children().bind("mouseover", function () {
+            $menu = $(this);
+            $content = $(body).find('div[content="' + $(this).attr("content-to") + '"]');
+            $menu.addClass('current').siblings().removeClass('current');
+            $content.removeClass('hide').siblings().addClass('hide');
+        });
+    }
+
+    function ChangeCode() {
+        var code = document.getElementById('imgCode');
+        code.src += '?';
+    }
+</script>
+
+
+</body>
+</html>

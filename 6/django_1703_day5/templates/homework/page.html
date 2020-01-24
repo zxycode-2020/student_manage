@@ -1,0 +1,36 @@
+<nav aria-label="Page navigation" class="text-center">
+    <ul class="pagination">
+        <!--上一页-->
+        {% if stus.has_previous %}
+            <li>
+                <a href="?pn={{ stus.previous_page_number }}&keyword={{ request.GET.keyword }}&order={{ request.GET.order }}&rule={{ request.GET.rule }}" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                </a>
+            </li>
+        {% endif %}
+
+        <!--end-->
+
+        <!--分页数字-->
+
+        {% for num in numbers %}
+            {% if num == pn %}
+                <li class="active"><a href="?pn={{ num }}">{{ num }}</a></li>
+            {% else %}
+                <li><a href="?pn={{ num }}">{{ num }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if stus.has_next %}
+            <li>
+                <a href="?pn={{ stus.next_page_number }}&keyword={{ request.GET.keyword }}&order={{ request.GET.order }}&rule={{ request.GET.rule }}" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+    <ul>
+        <li>当前第{% if request.GET.pn %}{{ request.GET.pn }}{% else %} 1 {% endif %}页    总页数：{{ num_pages }}</li>
+    </ul>
+
+</nav>

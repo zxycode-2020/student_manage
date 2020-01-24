@@ -1,0 +1,59 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://v3.bootcss.com/favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'homework/css/bootstrap.min.css' %}">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type="text/javascript" src="{% static 'user/js/ie10-viewport-bug-workaround.js' %}"></script>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'user/css/signin.css' %}">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script type="text/javascript" src="{% static 'user/js/ie-emulation-modes-warning.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+
+    <form action="{% url 'login' %}" class="form-signin" method="post">
+        <h2 class="form-signin-heading" style="color: red;">{{ error }}</h2>
+        <label for="inputEmail" class="sr-only">用户名</label>
+        <input name="username" id="inputEmail" class="form-control" placeholder="用户名" required="" autofocus="">
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="密码" required="">
+        {#        <div class="checkbox">#}
+        {#          <label>#}
+        {#            <input type="checkbox" value="remember-me"> Remember me#}
+        {#          </label>#}
+        {#        </div>#}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登陆</button>
+        <a class="btn btn-lg btn-danger btn-block" href="{% url 'reg' %}">注册</a>
+    </form>
+
+</div> <!-- /container -->
+
+</body>
+</html>

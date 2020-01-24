@@ -1,0 +1,12 @@
+orm特点：
+    1.不需要去写sql语句
+        select * from stu
+        Stu.objects.all() # 调用django下的apI操作
+
+    2.夸数据库
+        sqlite3
+            Stu.objects.all() # 调用django下的apI操作
+        mysql
+            Stu.objects.all() # 调用django下的apI操作
+
+    3 操作方便

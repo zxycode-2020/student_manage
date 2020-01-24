@@ -1,0 +1,27 @@
+django-admin
+	useradmin
+	modeladmin
+
+	自定义widget
+
+	自定义action
+
+
+cookie
+	防止重复投票
+	系统配置
+		分页显示记录条数设置
+
+session
+	数据库（数据库里边）
+	文件
+	缓存（内存）
+	内存和和数据库
+	signed_cookie
+
+csrf
+	跨站请求保护
+
+
+ajax
+	异步刷新技术（jquery）

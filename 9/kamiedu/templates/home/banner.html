@@ -1,0 +1,13 @@
+    <div>
+        <div>
+            <ul id="bxslider" class="bxslider">
+                {% for banner in banner_list %}
+                    <li>
+                        <a href="{{ banner.href }}">
+                            <img style="height: 300px; width: 100%" src="{{ banner.img.url }}">
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>

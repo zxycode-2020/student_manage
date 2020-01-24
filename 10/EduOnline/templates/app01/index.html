@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'plugins/bxSlider/jquery.bxslider.css' %}">
+</head>
+<body>
+<ul class="bxslider">
+    {% for slider in sliders %}
+        <li>
+            <a href="{{ slider.link }}">
+                <img src="{{ slider.img.url }}" alt="{{ slider.name }}" width="100%" height="300">
+            </a>
+        </li>
+    {% empty %}
+        no banner to show
+    {% endfor %}
+</ul>
+
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/bxSlider/jquery.bxslider.min.js' %}"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.bxslider').bxSlider({
+            auto:true
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block css %}{% endblock %}
+</head>
+<body>
+<div class="head">网站头</div>
+<div class="banner">网站banner</div>
+{% block main %}
+    主体内容
+{% endblock %}
+<div class="foot">网站尾部</div>
+{% block js %} {% endblock %}
+</body>
+</html>

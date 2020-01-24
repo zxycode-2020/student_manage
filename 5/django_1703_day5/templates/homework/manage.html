@@ -1,0 +1,40 @@
+{% extends 'homework/base.html' %}
+
+{% block main %}
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>ID</th>
+            <th>姓名
+                <a href=""><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a href=""><span class="glyphicon glyphicon-arrow-down"></span></a>
+            </th>
+            <th>年龄
+                <a href=""><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a href=""><span class="glyphicon glyphicon-arrow-down"></span></a>
+            </th>
+            <th>成绩
+                <a href=""><span class="glyphicon glyphicon-arrow-up"></span></a>
+                <a href=""><span class="glyphicon glyphicon-arrow-down"></span></a>            </th>
+            <th>班级</th>
+            <th>邮箱</th>
+            <th>添加日期</th>
+            <th>操作</th>
+        </tr>
+        {% for stu in stus %}
+            <tr>
+                <td>{{ stu.id }}</td>
+                <td>{{ stu.name }}</td>
+                <td>{{ stu.age }}</td>
+                <td>{{ stu.score }}</td>
+                <td>{{ stu.cls.name }}</td>
+                <td>{{ stu.email }}</td>
+                <td>{{ stu.date_add | date:'Y-m-d' }}</td>
+                <td>
+                    <a href="{% url 'stu_del' %}?sid={{ stu.id }}" onclick="return confirm('真的要删除吗？？？？你确定吗');"> 删除</a>
+                    <a href="{% url 'stu_edit' %}?sid={{ stu.id }}"> 修改</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}

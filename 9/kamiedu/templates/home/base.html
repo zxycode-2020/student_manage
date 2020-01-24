@@ -1,0 +1,458 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>首页</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/commons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugin.css' %}">
+
+    <link href="{% static 'css/jquery.bxslider.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+
+    <style>
+        .sv-error-msg {
+            bottom: -15px;
+            position: absolute;
+            font-size: 8px;
+            color: #a94442;
+            background: #f2dede;
+            border: 1px solid #ebccd1;
+            height: 15px;
+            line-height: 15px;
+            padding: 0 20px;
+        }
+
+        .horiz-img-region {
+            padding: 10px 0px;
+            margin-top: 20px;
+        }
+
+        .horiz-img-region .horiz-img-item {
+            width: 176px;
+            float: left;
+            margin: 0 10px;
+        }
+
+        .horiz-img-region .horiz-img-item img {
+            height: 160px;
+            width: 100%;
+            display: block;
+        }
+
+        .thumbnail .caption {
+            height: 51px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .thumbnail .caption p {
+            margin: 0px;
+        }
+
+        .recruit_region {
+        }
+
+        .recruit_list {
+            color: #555;
+            margin: 5px 0px;
+            display: block;
+            cursor: pointer;
+
+        }
+
+        .recruit_list .title {
+            padding-left: 0px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .recruit_list .salary {
+            text-align: right;
+        }
+
+        .owl-clients-v1 img {
+            width: 120px;
+            height: auto;
+        }
+    </style>
+    {% block css %} {% endblock %}
+
+</head>
+<body>
+<div class="pg-header">
+    <div class="header">
+        <div class="wrap clearfix">
+            <div class="logo">
+                <a href="http://127.0.0.1/index.html">
+                    <img src="{% static 'images/logo1.jpg' %}">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">首页</a></li>
+                    <li><a href="http://127.0.0.1/teacher.html">师资团队</a></li>
+                    <li><a href="{% url 'student' %}">学员就业</a></li>
+                    <li><a href="http://127.0.0.1/videos-0-0-0.html">课程分类</a></li>
+                    <li><a href="http://127.0.0.1/problems.html">常见问题</a></li>
+                    <li><a href="http://127.0.0.1/about.html">关于我们</a></li>
+                </ul>
+            </nav>
+            <div class="info">
+                <div class="lists">
+
+                    <span class="phone">
+                            <i class="glyphicon glyphicon-headphones"></i>
+                            <span>010-88888888</span>
+                        </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pg-body">
+    {% block body %}
+
+    <div>
+        <form>
+            <input type="hidden" name="csrfmiddlewaretoken" value="Rc9pWGLtiPIScxKCtHzDetfDyz7gxy1i">
+        </form>
+    </div>
+
+    {% include 'home/banner.html' %}
+
+
+    <div class="bg-gray ptb20">
+        <div class="wrap">
+            <div class="floor">
+
+                <div class="floor-title">
+                    <span>最新公告</span>
+                </div>
+
+                <div class="floor-content clearfix" style="background-color: #F2FFEA;">
+
+                    <div class="row">
+                        {% for notice in notice_list %}
+                            <div class="col-sm-4 info-blocks">
+
+                                <i class="icon-info-blocks fa fa-bell-o" style="margin-top: 20px;"></i>
+
+                                <div class="info-blocks-in">
+                                    <h3>{{ notice.title | slice:'12' }}</h3>
+                                    <p style="color: #999;">
+                                        {{ notice.description | slice:'45' }}...
+                                        <br>
+                                        <a href="/noticedetail/{{ notice.id }}/" target="_blank">查看更多</a>
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+
+            <div class="floor">
+                <div class="floor-title">
+                    <span>课程介绍</span>
+                </div>
+                <div class="floor-content clearfix">
+                    {% for course in course_list %}
+                        <a class="panel-item" href="http://127.0.0.1/course-detail-5.html">
+                            <div class="service-block service-block-default">
+                                <img src="{{ course.img.url }}" style="width:50px;height: 50px;" alt="" class="img-circle">
+                                <h2 class="heading-md">{{ course.name }}</h2>
+                                <p>{{ course.description | slice:'42'}}</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            <div class="floor">
+                <div class="floor-title">
+                    <span>学员就业</span>
+                    <a href="http://127.0.0.1/search-0-0-0-0-0-0.html" target="_blank" class="more">More »</a>
+                </div>
+                <div class="floor-content clearfix">
+                    <div class="col-md-8">
+                        <div class="funny-boxes funny-boxes-top-yellow bg-color-white">
+                            <div class="row">
+                                <div class="col-md-4 funny-boxes-img">
+                                    <img class="img-responsive" style="height: 186px;width: 160px;"
+                                         src="{{ stu_detail.student.avatar.url }}" alt="">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fa-fw fa fa-briefcase"></i> {{ stu_detail.student.salary }}/月</li>
+                                        <li><i class="fa-fw fa fa-map-marker"></i> {{ stu_detail.student.company }}</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="#">{{ stu_detail.student.name }}</a></h2>
+                                    <ul class="list-unstyled funny-boxes-rating">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star-o"></i></li>
+                                    </ul>
+                                    <p>
+                                        {{ stu_detail.letter | slice:'300' }}……</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 recruit_region">
+                        <div class="headline" style="margin:0px;border-bottom:2px solid #72c02c"></div>
+                        <h2 style="margin: 10px 0px;">招聘信息</h2>
+
+                        {% for item in recruit_list %}
+                            <a class="recruit_list clearfix" title="{{ item.title }}">
+                                <div class="col-md-6 title">{{ item.content | slice:'20' }}</div>
+                                <div class="col-md-6 salary">{{ item.salary | slice:'12' }}/月</div>
+                            </a>
+                        {% endfor %}
+
+                    </div>
+
+                    <div class="col-md-12 horiz-img-region clearfix">
+                        {% for stu in student_list %}
+                            <div class="horiz-img-item">
+                                <div class="thumbnail">
+                                    <img src="{{ stu.avatar.url }}" width="166" height="160">
+                                    <div class="caption">
+                                        <p>{{ stu.company }}</p>
+                                        <p>{{ stu.salary }}/月</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        {% endfor %}
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="floor">
+                <div class="floor-title">
+                    <span>校园生活</span>
+                </div>
+                <div class="floor-content clearfix">
+                    <div class="row team-v3">
+                        <div class="col-md-3 col-sm-6 md-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="{% static 'images/img1-md.jpg' %}" alt="">
+                                <div class="team-hover">
+                                    <span>Daniel Wearne</span>
+                                    <small>Technical Director</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 md-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="{% static 'images/img1-md.jpg' %}" alt="">
+                                <div class="team-hover">
+                                    <span>Sara Lisbon</span>
+                                    <small>Designer</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 sm-margin-bottom-50">
+                            <div class="team-img">
+                                <img class="img-responsive" src="{% static 'images/img1-md.jpg' %}" alt="">
+                                <div class="team-hover">
+                                    <span>John Doe</span>
+                                    <small>Developer</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="team-img">
+                                <img class="img-responsive" src="{% static 'images/img1-md.jpg' %}" alt="">
+                                <div class="team-hover">
+                                    <span>Alice Williams</span>
+                                    <small>Support</small>
+                                    <p>Lorem ipsum dolor sit ame con sectetur adipisci ng e lit.</p>
+                                    <ul class="list-inline team-social-v3">
+                                        <li><a href="#"><i class="rounded-x fa fa-twitter"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-facebook"></i></a>
+                                        </li>
+                                        <li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="floor">
+                <div class="floor-title">
+                    <span>企业合作</span>
+                </div>
+                <div class="floor-content clearfix">
+                    <div class="owl-clients-v1 owl-carousel owl-theme" style="opacity: 1; display: block;">
+                        {% for friend in friend_list %}
+                            <div class="owl-wrapper-outer">
+                                <div class="owl-wrapper"
+                                     style="width: 280px; left: 0px; display: block; transition: all 1000ms ease; transform: translate3d(0px, 0px, 0px);">
+                                    <div class="owl-item" style="width: 140px;"><a class="item" href="{{ friend.link }}">
+                                        <img src="{{ friend.logo.url}}" alt="x小男人">
+                                    </a></div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <div class="owl-controls clickable" style="display: none;">
+                            <div class="owl-pagination">
+                                <div class="owl-page"><span class=""></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endblock %}
+</div>
+<div class="pg-footer bg-gray">
+    <div class="wrap">
+        <div class="footer-block">
+            <p>
+                <a href="javascript:void(0);" target="_blank">关于我们</a>
+                <a href="javascript:void(0);" target="_blank">联系我们</a>
+                <a href="javascript:void(0);" target="_blank">招贤纳士</a>
+                <span class="fline">|</span>
+
+                <a class="footauto" href="javascript:void(0);" target="_blank">教育</a>
+                <span class="fline">|</span>
+                <a href="javascript:void(0);" target="_blank">意见反馈</a>
+            </p>
+
+            <p>京ICP备123456789号</p>
+            <p><span class="footarial">© 2004-2015 www.kami.org All Rights Reserved.</span> 教育 版权所有</p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+{% block js %}
+<script type="text/javascript">
+    $(function () {
+        $("[data-toggle='popover']").popover();
+    });
+
+</script>
+
+<script src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<script src="{% static 'js/owl-carousel.js' %}"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('.bxslider').bxSlider({
+            auto: true
+        });
+
+        OwlCarousel.initOwlCarousel();
+    });
+
+    function SubmitPublish(form, status) {
+        var result = $.validate(form, status);
+        if (result) {
+            $.ajax({
+                url: '/publish.html',
+                type: 'POST',
+                data: result,
+                success: function (callback) {
+                    callback = $.parseJSON(callback);
+                    if (callback.status) {
+
+                    } else {
+                        $.each(callback.error, function (key, value) {
+
+                            var name = key;
+                            var msg = value[0].message;
+                            var $parent = $(form).find('[name="' + name + '"]').parent();
+                            $.ErrorMessage($parent, msg);
+                        });
+                    }
+                }
+            });
+        }
+    }
+
+    function CancelPublish() {
+
+    }
+    $(function () {
+        ChangeTab('#tab-menu-title', '#tab-menu-body');
+    });
+
+    function ChangeTab(title, body) {
+        $(title).children().bind("mouseover", function () {
+            $menu = $(this);
+            $content = $(body).find('div[content="' + $(this).attr("content-to") + '"]');
+            $menu.addClass('current').siblings().removeClass('current');
+            $content.removeClass('hide').siblings().addClass('hide');
+        });
+    }
+
+    function ChangeCode() {
+        var code = document.getElementById('imgCode');
+        code.src += '?';
+    }
+</script>
+
+{% endblock %}
+</body>
+</html>

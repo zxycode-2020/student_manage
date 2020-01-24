@@ -1,0 +1,24 @@
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://v3.bootcss.com/examples/dashboard/#">GameOfThrone</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">{{ request.user.userprofile.nick }}</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="{% url 'logout' %}">注销</a></li>
+          </ul>
+          <form action="{% url 'manage' %}" class="navbar-form navbar-right" method="get">
+            <input type="text" class="form-control" placeholder="Search..." name="keyword" value="{{ request.GET.keyword }}">
+          </form>
+        </div>
+      </div>
+    </nav>

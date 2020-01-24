@@ -1,0 +1,14 @@
+flask
+	超轻量级、所有模块需要组装，开发一些小型应用
+django
+	all in one
+	数据库同步系统
+		makemigrations
+		migrate
+	admin 自带后台
+
+tornado
+	高并发框架（web开发框架、出色的web服务器）
+	异步非阻塞
+	websocket--长连接
+

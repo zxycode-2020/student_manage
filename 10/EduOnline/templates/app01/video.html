@@ -1,0 +1,45 @@
+{% load mytags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            display: inline-block;
+            padding: 5px;
+            text-decoration: none;
+        }
+        .active{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+<div>
+    {% action_all request.path 2 %}
+    {% for item in direction_list %}
+        {% action request.path item 2 %}
+    {% endfor %}
+</div>
+<div>
+
+    {% action_all request.path 3 %}
+    {% for item in class_list %}
+        {% action request.path item 3 %}
+    {% endfor %}
+</div>
+<div>
+
+    {% action_all request.path 4 %}
+    {% for item in level_list %}
+        {% action request.path item 4 %}
+    {% endfor %}
+</div>
+<div>
+    {% for video in video_list %}
+        {{ video.title }}
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{user}}
+<hr>
+{% for article in articles %}
+    {{ article.0 }}
+    {{ article.1 }}
+    <hr>
+{% endfor %}
+</body>
+</html>

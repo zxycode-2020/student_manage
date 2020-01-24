@@ -1,0 +1,11 @@
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="{{ index }}"><a href="{% url 'homework:index' %}">增加学生 <span class="sr-only">(current)</span></a></li>
+            <li class="{{ manage }}"><a href="{% url 'homework:manage' %}">学生管理</a></li>
+            <li class="{{ config }}"><a href="{% url 'homework:config' %}">系统配置</a></li>
+            <li class=""><a href="https://v3.bootcss.com/examples/dashboard/#">其它配置</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">班级管理</a></li>
+          </ul>
+        </div>

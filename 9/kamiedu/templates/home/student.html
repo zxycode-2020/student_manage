@@ -1,0 +1,177 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% block body %}
+    <div class="bg-gray ptb20">
+        <div class="wrap">
+
+            <div class="headline-center margin-bottom-60">
+                <h2>关于KAMI教育</h2>
+                <p>用责任和情怀专注IT教育30年<br>
+                    自8月2日上线以来，由优酷、奥飞剧业、雄孩子传媒、有妖气联合出品的《镇魂街》凭借逼真的特效场景搭建、《镇魂街》已累计8亿的网络播放量，</p>
+            </div>
+
+            <div class="blog_masonry_3col">
+                <div class="container content grid-boxes masonry clearfix"
+                     style="position: relative;padding-top: 0;padding-bottom: 0;">
+                    <div class="column-flow">
+
+
+                        <div class="grid-boxes-in masonry-brick">
+                            <img class="img-responsive" style="height: 300px;width: 320px;"
+                                 src="./index/s1.jpg" alt="">
+                            <div class="grid-boxes-caption">
+                                <h3><a href="#">小美</a></h3>
+                                <ul class="list-inline grid-boxes-news">
+                                    <li><span>公司：</span> <a href="#">北京其二布莱特科技公司</a></li>
+                                    <li><span>薪资：</span>200000/月</li>
+                                </ul>
+                                <p>
+                                    公司一群老油条，懒散惯了！对于领导的工作安排也是拖拖拉拉！这样下去不行啊。于是厂长，把他女婿安排进来，监督他们！老油条不愧老油条，没多久。厂长女婿也被他们拖下水，上了他们的贼船……</p>
+                            </div>
+                        </div>
+
+
+                        <div class="grid-boxes-in masonry-brick">
+                            <img class="img-responsive" style="height: 300px;width: 320px;"
+                                 src="./index/s1.jpg" alt="">
+                            <div class="grid-boxes-caption">
+                                <h3><a href="#">刘涛涛</a></h3>
+                                <ul class="list-inline grid-boxes-news">
+                                    <li><span>公司：</span> <a href="#">e天天教育有限公司</a></li>
+                                    <li><span>薪资：</span>200000/月</li>
+                                </ul>
+                                <p>整啥哦呢</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="column-flow">
+
+
+                        <div class="grid-boxes-in masonry-brick">
+                            <img class="img-responsive" style="height: 300px;width: 320px;"
+                                 src="./index/s1.jpg" alt="">
+                            <div class="grid-boxes-caption">
+                                <h3><a href="#">张扬</a></h3>
+                                <ul class="list-inline grid-boxes-news">
+                                    <li><span>公司：</span> <a href="#">北京其二布莱特科技公司</a></li>
+                                    <li><span>薪资：</span>1999999/月</li>
+                                </ul>
+                                <p>觉得自己老牛逼了</p>
+                            </div>
+                        </div>
+
+
+                        <div class="grid-boxes-in masonry-brick">
+                            <img class="img-responsive" style="height: 300px;width: 320px;"
+                                 src="./index/s1.jpg" alt="">
+                            <div class="grid-boxes-caption">
+                                <h3><a href="#">Alice</a></h3>
+                                <ul class="list-inline grid-boxes-news">
+                                    <li><span>公司：</span> <a href="#">中国中央电视台CCAV</a></li>
+                                    <li><span>薪资：</span>399999 /月</li>
+                                </ul>
+                                <p>瞎来了啊</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="column-flow">
+
+
+                        <div class="grid-boxes-in masonry-brick">
+                            <img class="img-responsive" style="height: 300px;width: 320px;"
+                                 src="./index/s1.jpg" alt="">
+                            <div class="grid-boxes-caption">
+                                <h3><a href="#">拉稀</a></h3>
+                                <ul class="list-inline grid-boxes-news">
+                                    <li><span>公司：</span> <a href="#">北京其二布莱特科技公司</a></li>
+                                    <li><span>薪资：</span>1999999/月</li>
+                                </ul>
+                                <p>拉了一晚上呀</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div><!--/container-->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/student.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <style>
+        .sv-error-msg {
+            bottom: -15px;
+            position: absolute;
+            font-size: 8px;
+            color: #a94442;
+            background: #f2dede;
+            border: 1px solid #ebccd1;
+            height: 15px;
+            line-height: 15px;
+            padding: 0 20px;
+        }
+
+        .horiz-img-region {
+            padding: 10px 0px;
+            margin-top: 20px;
+        }
+
+        .horiz-img-region .horiz-img-item {
+            width: 176px;
+            float: left;
+            margin: 0 10px;
+        }
+
+        .horiz-img-region .horiz-img-item img {
+            height: 160px;
+            width: 100%;
+            display: block;
+        }
+
+        .thumbnail .caption {
+            height: 51px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .thumbnail .caption p {
+            margin: 0px;
+        }
+
+        .recruit_region {
+        }
+
+        .recruit_list {
+            color: #555;
+            margin: 5px 0px;
+            display: block;
+            cursor: pointer;
+
+        }
+
+        .recruit_list .title {
+            padding-left: 0px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .recruit_list .salary {
+            text-align: right;
+        }
+
+        .owl-clients-v1 img {
+            width: 120px;
+            height: auto;
+        }
+    </style>
+{% endblock %}
